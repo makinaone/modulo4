@@ -33,7 +33,7 @@
             "label": "cloud-object-storage",
             "provider": null,
             "plan": "Lite",
-            "name": "uem_cos",
+            "name": "fernando",
             "tags": [
                 "Lite",
                 "storage",
