@@ -6,7 +6,7 @@ from cloudant.query import Query
 import time
 
 
-def training_pipeline(path, model_info_db_name='models-db'):
+def training_pipeline(path, model_info_db_name='fernando'):
     """
         Función para gestionar el pipeline completo de entrenamiento
         del modelo.
@@ -74,7 +74,7 @@ def training_pipeline(path, model_info_db_name='models-db'):
     put_best_model_in_production(metrics_dict, model_info_db_name)
 
 
-def save_model(obj, name, timestamp, bucket_name='models-uem'):
+def save_model(obj, name, timestamp, bucket_name='ia2021mod4'):
     """
         Función para guardar el modelo en IBM COS
 
