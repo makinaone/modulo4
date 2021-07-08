@@ -1,6 +1,7 @@
 from flask import Flask, request
 import os
-from app.src.models import train_model, predict
+from app.src.models import train_model
+from app.src.models.predict import predict_pipeline
 from app import ROOT_DIR
 import warnings
 
