@@ -53,6 +53,17 @@ def get_raw_data_from_local(path):
     df = pd.read_csv(path)
     return df.copy()
 
+def get_raw_data_from_request(data):
+
+    """
+        Función para obtener nuevas observaciones desde request
+        Args:
+           data (List):  Lista con la observación llegada por request.
+        Returns:
+           DataFrame. Dataset con los datos de entrada.
+    """
+    return pd.DataFrame(data, columns=init_cols)
+
 
 def transform_data(train_df, test_df, timestamp, target, cols_to_remove):
 

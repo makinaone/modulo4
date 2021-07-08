@@ -2,4 +2,4 @@
 applications:
 - name: proyecto-uem-2021-train
   random-route: true
-  memory: 128M
+  memory: 256M
