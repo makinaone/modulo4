@@ -1,4 +1,4 @@
-from ..data.make_dataset import make_dataset
+from ..data.make_dataset_pred import make_dataset
 from app import cos, client
 from cloudant.query import Query
 

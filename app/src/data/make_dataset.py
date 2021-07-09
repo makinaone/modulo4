@@ -37,6 +37,16 @@ def make_dataset(path, timestamp, target, cols_to_remove, model_type='RandomFore
 
     return train_df.copy(), test_df.copy()
 
+    print('---> Getting data')
+    data_df = get_raw_data_from_request(data)
+    print('---> Transforming data')
+    data_df = transform_data_pred(data_df, model_info, cols_to_remove)
+    print('---> Feature engineering')
+    data_df = feature_engineering(data_df)
+    print('---> Preparing data for training')
+    data_df = pre_train_data_prep(data_df, model_info)
+    return data_df.copy()
+
 
 def get_raw_data_from_local(path):
 
@@ -53,16 +63,6 @@ def get_raw_data_from_local(path):
     df = pd.read_csv(path)
     return df.copy()
 
-def get_raw_data_from_request(data):
-
-    """
-        Función para obtener nuevas observaciones desde request
-        Args:
-           data (List):  Lista con la observación llegada por request.
-        Returns:
-           DataFrame. Dataset con los datos de entrada.
-    """
-    return pd.DataFrame(data, columns=init_cols)
 
 
 def transform_data(train_df, test_df, timestamp, target, cols_to_remove):
