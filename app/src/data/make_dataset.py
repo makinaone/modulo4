@@ -3,7 +3,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 from ..features.feature_engineering import feature_engineering
-from app import cos
+from app import cos, init_cols
 
 
 def make_dataset(path, timestamp, target, cols_to_remove, model_type='RandomForest'):
