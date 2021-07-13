@@ -1,1 +1,2 @@
-# Proyecto Módulo4 UEM: Training pipeline
+# Proyecto Módulo4 UEM: Training and predict pipeline
+
